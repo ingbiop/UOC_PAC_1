@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action=""> <!-- Formulari -->
+        <h2>Formulari de Contacte</h2>
+        <label for="nom">Nom:</label> <!-- Etiqueta lligada a un camp a través de l'atribut "for", al que se li indica l'ID del camp al quan fa referència-->
+        <input type="text" id="nom" placeholder="Introdueix el teu nom" name="nom_usuari" required><br><br>
+        <label for="correu">Correu electrònic:</label>        
+        <input type="email" id="correu" placeholder="Introdueix el teu e-mail" name="correu_usuari" required><br><br>
+        <label for="comentari">Comentaris:</label>
+        <textarea id="comentari" cols="30" rows="10" placeholder="Escriu el/s teu comentari/s" name="comentaris" required></textarea><br><br>
+        <label for="consent">Accepto els <a href="https://word2word.es/termes-i-condicions/">Termes i Condicions de la web</a> </label>
+        <input type="checkbox" id="consent" name="acceptar" required>
+        <button type="submit">Enviar</button>  <!-- Alternativa  <input type="submit" value="Enviar"> -->
+    </form>
+</body>
+</html>
