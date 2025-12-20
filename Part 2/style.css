@@ -10,13 +10,18 @@
 nav{
     background-color: #222;      /* fons fosc per destacar-lo */
     padding: 20px 0;             /* espai vertical */
+    display: flex;
+    flex-direction: row;
 }
 
 nav ul {
     list-style: none;            /* eliminar punts de la llista */
     display: flex;               /* utilitzar flexbox per alinear els elements */
-    justify-content: center;     /* centrar els elements horitzontalment */
+    justify-content: end;     /* centrar els elements horitzontalment */
     gap: 30px;                   /* espai entre els elements */
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 7px;
 }
 
 nav a{
@@ -24,12 +29,24 @@ nav a{
         text-decoration: none;   /* eliminar subratllat */
         padding: 3px 5px 5px 5px;
         border-radius: 4px;
+        vertical-align: middle;
+        font-size: 3vh;
+        bottom: 0;
     }
 
 nav a:hover {
     text-decoration: underline;  
     background-color: #666;
 }
+
+.home-icon svg {
+    height: 30px;
+    width: 29.3225px;
+    vertical-align: middle;
+    margin: 0px 5px 5px 40px;
+    
+}
+
 /* HERO SECTION */
 main {
     position: relative;
