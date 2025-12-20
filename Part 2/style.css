@@ -1,11 +1,45 @@
 @charset "utf";
 
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+/*NAV*/
+nav{
+    background-color: #222;      /* fons fosc per destacar-lo */
+    padding: 20px 0;             /* espai vertical */
+}
+
+nav ul {
+    list-style: none;            /* eliminar punts de la llista */
+    display: flex;               /* utilitzar flexbox per alinear els elements */
+    justify-content: center;     /* centrar els elements horitzontalment */
+    gap: 30px;                   /* espai entre els elements */
+}
+
+nav a{
+        color: white;
+        text-decoration: none;   /* eliminar subratllat */
+}
+
+/* HERO SECTION */
+main {
+    position: relative;
+}
+.hero-text h1 {
+    text-align: center;
+    color: white;
+    padding: 100px 20px;        /* espai al voltant del text */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('assets/img/Bosc_1.jpg'); /* imatge de fons */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
 }
 /* FOOTER GENERAL */
 .peu {
-    background-color: #111;      /* fons fosc per destacar-lo */
+    background-color: #222;      /* fons fosc per destacar-lo */
     padding: 40px 0;             /* espai vertical */
     text-align: center;          /* centrar contingut */
     margin-top: 60px;            /* espai abans del footer */
@@ -126,9 +160,17 @@
 }
 
 #experiencia{
+    display: grid;
+
     background-color:#222222 ;
     color: white;
 }
+.habilitats {
+    background-image: url(assets/logos/Experiencia.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+]
 
 .aficions-grid {
     display: grid;
