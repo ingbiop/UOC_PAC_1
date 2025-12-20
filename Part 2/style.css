@@ -6,20 +6,26 @@
     box-sizing: border-box;
 }
 
+header{
+        background-color: #222; 
+        background-size: ;
+        height: auto;
+}
+
 /*NAV*/
 nav{
-    background-color: #222;      /* fons fosc per destacar-lo */
-    padding: 20px 0;             /* espai vertical */
+    padding: 15px 20px 20px 30px; 
+                /* espai vertical */
     display: flex;
-    flex-direction: row;
+    justify-content: space-between; /* espai entre els elements */
 }
 
 nav ul {
+    display: flex;
     list-style: none;            /* eliminar punts de la llista */
     display: flex;               /* utilitzar flexbox per alinear els elements */
-    justify-content: end;     /* centrar els elements horitzontalment */
+    justify-content: flex-end;     /* centrar els elements horitzontalment */
     gap: 30px;                   /* espai entre els elements */
-    margin-right: 5%;
     margin-left: 5%;
     margin-top: 7px;
 }
@@ -34,7 +40,7 @@ nav a{
         bottom: 0;
     }
 
-nav a:hover {
+nav ul a:hover {
     text-decoration: underline;  
     background-color: #666;
 }
@@ -42,9 +48,7 @@ nav a:hover {
 .home-icon svg {
     height: 30px;
     width: 29.3225px;
-    vertical-align: middle;
-    margin: 0px 5px 5px 40px;
-    
+    vertical-align: middle;    
 }
 
 /* HERO SECTION */
@@ -196,17 +200,14 @@ h2{
 
 }
 
-#experiencia{
+.habilitats{
     display: grid;
-
+    grid-template-columns: repeat(3, 1fr);
     background-color:#222222 ;
+    background-size: cover;
     color: white;
 }
-.habilitats {
-    background-image: url(assets/logos/Experiencia.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 
 
 .aficions-grid {
