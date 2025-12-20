@@ -22,8 +22,14 @@ nav ul {
 nav a{
         color: white;
         text-decoration: none;   /* eliminar subratllat */
-}
+        padding: 3px 5px 5px 5px;
+        border-radius: 4px;
+    }
 
+nav a:hover {
+    text-decoration: underline;  
+    background-color: #666;
+}
 /* HERO SECTION */
 main {
     position: relative;
@@ -49,6 +55,7 @@ h1 {
 
 h2{
     margin: 30px 0;
+
 }
 /* FOOTER GENERAL */
 .peu {
@@ -183,7 +190,7 @@ h2{
     background-repeat: no-repeat;
     background-size: cover;
 }
-]
+
 
 .aficions-grid {
     display: grid;
