@@ -1,0 +1,349 @@
+@charset "utf";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header{
+        background-color: #222; 
+        background-size: cover;
+        width:100%;
+        height: auto;
+            
+}
+
+/*NAV*/
+nav{
+    padding: 15px 20px 20px 30px; 
+                /* espai vertical */
+    display: flex;
+    justify-content: space-between; /* espai entre els elements */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;            /* eliminar punts de la llista */
+    display: flex;               /* utilitzar flexbox per alinear els elements */
+    justify-content: flex-end;     /* centrar els elements horitzontalment */
+    gap: 30px;                   /* espai entre els elements */
+    margin-left: 5%;
+    margin-top: 7px;
+}
+
+@media only screen and (max-width: 350px) {
+    nav ul  {
+        display:flex;
+        flex-direction: column;
+        padding: 2px;
+        line-height: 0;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+nav a{
+        color: white;
+        text-decoration: none;   /* eliminar subratllat */
+        padding: 3px 5px 5px 5px;
+        border-radius: 4px;
+        vertical-align: middle;
+        font-size: 3vh;
+        bottom: 0;
+    }
+
+nav ul a:hover {
+    text-decoration: underline;  
+    background-color: #666;
+}
+
+.home-icon svg {
+    height: 30px;
+    width: 29.3225px;
+    vertical-align: middle;    
+}
+
+/* HERO SECTION */
+main {
+    width:100%;
+    position: relative;
+    margin: 50px;
+}
+.hero-text {
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    padding: 100px 20px;        /* espai al voltant del text */
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('assets/img/Bosc_1.jpg'); /* imatge de fons */
+    filter: grayscale(100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+
+h1 {
+    text-shadow: 0px 5px 5px #333;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+h2{
+    margin: 0px 0px 30px 0;
+
+}
+#presentacio p {
+    font-size: 1.2rem;
+    margin-right: 5%;
+    margin-left: 10%
+}
+/* FOOTER GENERAL */
+.peu {
+    width:100%;
+    background-color: #222;      /* fons fosc per destacar-lo */
+    padding: 40px 0;             /* espai vertical */
+    text-align: center;          /* centrar contingut */
+    margin-top: 60px;            /* espai abans del footer */
+}
+
+/* Contenidor d'icones */
+.xarxes a {
+    color: white;                /* color de les icones */
+    font-size: 2rem;             /* mida de les icones */
+    margin: 0 15px;              /* separació entre icones */
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+/* Efecte hover */
+.xarxes a:hover {
+    color: #00aced;              /* blau amb to de xarxa social */
+}
+
+.projectes-grid {
+  display: flex;
+  justify-content: flex-start; /* justify-content: flex-start; Default value. Items are positioned at the beginning of the container */
+  gap: 2rem;
+  flex-wrap: wrap; /* ens fa un salt de linea quan no hi caben les diferents cards*/
+  margin: 0 auto; /*top and bottom margins to 0 and left and right margins to auto*/
+  width: fit-content; /* width: fit-content ajusarse al propi contingut*/
+
+}
+
+.card {
+    display:flex;
+    flex-direction: column;
+    flex: 0 1 15rem; 
+    /* 
+    flex: 0 1 15rem;
+        flex-grow 0; --> no permet que creixin més de mida
+        flex-shrink: 1; --> permet que es facin més estretes
+        flex-basis: 15rem; --> 15x16=240px
+    
+    Li podem dir també que no volem que s'encongeixin, sinó que es mantinguin fixes:
+    flex: 0 0 15rem;
+        flex-grow 0; --> no permet que creixin més de mida
+        flex-shrink: 0; --> no permet que es facin més estretes
+        flex-basis: 15rem; --> 15x16=240px
+    
+    Li podem dir que volem que les targetes creixin per adaptar-se a l'ample de la pantalla:
+    flex: 1 0 15rem;
+        flex-grow 1; --> permet que creixin més de mida
+        flex-shrink: 0; --> no permet que es facin més estretes
+        flex-basis: 15rem; --> 15x16=240px
+    */
+    border:1px solid #222;
+    border-radius: 10px;
+    /*  overflow:hidden;*/
+    box-shadow: 0 0 10px 10px #666;
+}
+
+
+@media only screen and (max-width: 9850px) and (min-width:746px){
+    .projectes-grid {
+        gap: 2rem;
+        margin: 0 auto;
+        width: fit-content;
+        justify-content:flex-start;
+    }
+    .card {
+        display:flex;
+        flex-direction: column;
+        flex: 1 1 15rem; 
+    }
+    .card img{
+        width: auto;
+        max-height: 300px;
+    }
+
+    .card:nth-child(3){
+        display:flex;
+        flex-direction: column;
+        flex: 0 1 15rem;
+    }
+}
+
+@media only screen and (max-width: 745px) {
+    .projectes-grid {
+        gap:2rem;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: fit-content;
+    }
+    .card {
+        display:flex;
+        flex-direction: column;
+        flex: 0 1 15rem; 
+        width:100%;
+    }
+}
+.card > h3 {
+    padding:1rem;
+}
+
+.card > img {
+    padding: .5rem 1rem;
+}
+
+.card > p {
+    padding:1rem;
+}
+
+.card > button {
+    margin: 1rem;
+    padding: .5rem 1rem;
+}
+
+.coneixements-icons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+
+.coneixements-icons svg:nth-child(1){
+    width: 170px;
+    height: 190px;
+    /*margin-bottom: 20px;  alguna altra manera de mantenir un espai proporcional responsive?*/
+}
+
+.coneixements-icons svg:nth-child(2){
+    width: 130px;
+    height: 130px;
+}
+.coneixements-icons svg:nth-child(3){
+    width: 130px;
+    height: 130px;
+}
+
+@media only screen and (max-width: 600px) {
+    .coneixements-icons{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+.habilitats{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items:center;
+    align-items: center;
+    background-color:#222222 ;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    margin-left: -50px;
+    margin-right: -50px;
+    gap: 20px;
+}
+
+.habilitat {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: auto;
+    width: auto;
+}
+
+.habilitat p {
+    position: absolute;
+    vertical-align: middle;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.habilitat svg {
+    ;
+    align-content: center;
+    width: 100px;
+    height: 200px;
+    margin-left: 15%;
+    margin-right: 10%;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 880px) {
+    .habilitats {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+}
+
+.aficions-grid {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.aficio {
+    display: flex;
+    margin: 5px;;
+    padding-top: 25px;
+    border:1px solid #333;
+    border-radius: 1rem;
+    background-color: #D9D9D9;
+}
+.aficio>p {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    line-height: auto;
+    width: 153px;
+    height: 43px;
+    text-align: center;
+    display:inline-block;
+    margin-bottom: 10px;
+}   
+
+.icona {
+    display:inline-block;
+    height: 40px;
+    width: 40px;
+    place-items: center;
+    margin-bottom: -50px;
+}
+.icona svg {
+    display:flex;
+    justify-content: center; 
+}
+
+.text-aficio  {
+    align-text: center;
+}
+
+section {
+    margin-bottom: 70px;
+}
