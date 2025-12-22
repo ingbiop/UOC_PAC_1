@@ -105,7 +105,17 @@ h2{
     background-color: #222;      /* fons fosc per destacar-lo */
     padding: 40px 0;             /* espai vertical */
     text-align: center;          /* centrar contingut */
+    vertical-align: center;
     margin-top: 60px;            /* espai abans del footer */
+}
+
+#twitter{
+    margin-bottom: 8px;
+}
+
+.peu img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 /* Contenidor d'icones */
